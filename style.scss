@@ -1,0 +1,130 @@
+/* sassy stuff */
+@mixin border-radius($radius) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+	-ms-border-radius: $radius;
+	border-radius: $radius;	
+}
+$dark-color: #434D53;
+
+
+/* global styling */
+* {
+	box-sizing: border-box;
+	margin: 0 0;
+	padding: 0 0;
+	color: $dark-color;
+	font-family: arial, sans-serif;
+}
+html body {
+	background-color: white;
+}
+
+
+/* everything else */
+#simon_container {
+	max-width: 500px;
+	height: 500px;
+	margin: 25px auto 0 auto;
+	border: 2px solid $dark-color;
+	@include border-radius(48%);
+	position: relative;
+	background-color: $dark-color;
+}
+
+.simon_button {
+	position: absolute;
+	border: 1px solid #ccc;
+	width: 48%;
+	height: 48%;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: -moz-none;
+	-ms-user-select: none;
+	-user-select: none;	
+	text-align: center;
+	padding-top: 90px;
+	font-size: 3em;
+	color: white;
+}
+.simon_button span {
+	opacity: 0.65;
+}
+.simon_button:hover {
+	border: 2px solid white;
+}
+#button_1 {
+	top: 5px;
+	right: 5px;
+	@include border-radius(1% 100% 1% 1%);
+	background-color: #FFAB07;
+}
+#button_2 {
+	bottom: 5px;
+	right: 5px;
+	@include border-radius(1% 1% 100% 1%);
+	background-color: #E9D558;
+}
+#button_3 {
+	bottom: 5px;
+	left: 5px;
+	@include border-radius(1% 1% 1% 100%);
+	background-color: #72AD75;
+}
+#button_4 {
+	top: 5px;
+	left: 5px;
+	@include border-radius(100% 1% 1% 1%);
+	background-color: #0E8D94;
+}
+
+/* indicates user's turn for simon_button(s) */
+.user_turn {
+	cursor: pointer;
+}
+
+#controls {
+	width: 200px;
+	height: 83px;
+	margin: 25px auto 0 auto;
+	position: relative;
+}
+.controls_container {
+	position: absolute;
+	top: 10px;
+	display: inline-block;
+	text-align: center;	
+	border: 1px solid $dark-color;
+	width: 80px;
+	height: 26px;
+	padding-top: 3px;
+	background-color: white;
+}
+#start  {
+	left: 60px;
+	z-index: 2;
+}
+#start:hover {
+	background-color: $dark-color;
+	color: white;
+	cursor: pointer;
+}
+#score {
+	opacity: 0.0;
+	right: 60px;
+	z-index: 1;
+}
+#turn {
+	position: absolute;
+	top: 46px;
+	left: 10px;
+	height: 26px;
+	width: 0px	;
+	opacity: 0.0;
+	text-align: center;
+	border: 1px solid $dark-color;
+	padding-top: 3px;
+	background-color: white;
+}
+
