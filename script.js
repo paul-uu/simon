@@ -1,7 +1,7 @@
 var SIMON = SIMON || {};
 SIMON.game_over = true;
 var colors_reg     = [' ', '#FFAB07', '#E9D558', '#72AD75', '#0E8D94'],
-	colors_bright  = [' ', '#ffd508', '#ffff6e', '#8ed892', '#11b0b9'];
+    colors_bright  = [' ', '#ffd508', '#ffff6e', '#8ed892', '#11b0b9'];
 
 SIMON.namespace = function(namespace_string) {
 	var parts = namespace_string.split('.'),
