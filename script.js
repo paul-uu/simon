@@ -75,7 +75,6 @@ SIMON.simon_turn = function(flag) {
 					button_on(SIMON.simon_array[i]);
 					i++;
 				} else {
-					console.log(SIMON.simon_array);
 					clearInterval(interval_id);
 				}
 			}
@@ -129,7 +128,6 @@ SIMON.user_turn = function() {
 		// correct user input
 		else {
 			clicks += 1;
-			console.log('good');
 		}
 	});
 	$('.simon_button').unbind('mouseup');
